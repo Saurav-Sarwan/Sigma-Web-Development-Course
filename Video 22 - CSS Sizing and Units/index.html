@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing and Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* html is root element */
+        html{
+            font-size: 12px;
+        }
+        .box{
+            border: 2px solid black;
+            /* width: 1707px; try in chrome */
+            width: 80vw;            
+            height: 10vh;
+            margin: auto; /* to set left and right margins to bring in center. (works only with block elements) */ 
+            background-color: aquamarine;
+            /* box-sizing: border-box; */
+        }
+
+        .container{
+            border: 2px solid black;            
+            width: 80vw;
+            /* height: 80vh; */            
+            min-height: 80vh; /* no limit on max height */
+            margin: 23px auto; /* 23px for up-down and auto for left-right */
+            font-size: 18px;
+            background-color: aquamarine;  
+        }
+        
+        /* container ka paragraph */
+        .container > div{
+            font-size: 2em; /* inherts the multiple of font-size from container*/
+            border: 2px solid red;
+            width: 50%; /* parent ke width ka 50% */
+        }
+
+        /* .container p{
+            font-size: 2rem;  inherts the multiple of font-size from root element
+        } */
+
+        .container > div > div{
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        .mycont{
+            border: 2px solid black;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+
+    </style>
+
+    <!-- in phone: vmin=width(vw)
+         in computer: vmin=height(vh) -->
+</head>
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+    <div class="box">
+        This is a box
+    </div>
+
+    <div class="container">
+        <!-- We cannot put <div> in <p> -->
+        <div>            
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam aliquam sapiente autem laboriosam commodi provident quidem? Quo dolorem soluta libero tempore odio vero harum. Maxime doloribus dicta commodi facere facilis? Nisi ad repudiandae, cum quos iure quaerat repellat, fuga rem modi laborum voluptas architecto. Praesentium.
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, delectus distinctio porro obcaecati veniam ullam quo minus! Cum, molestiae optio? Necessitatibus, doloribus consequatur.
+            </div>
+        </div>       
+    </div>
+
+    <div class="mycont">
+        I am another container.
+    </div>
+
+    <pre>
+    </pre>
+
+    <span class="box">
+        This is a box. cannot put width too.
+    </span>
+    
+</body>
+</html>

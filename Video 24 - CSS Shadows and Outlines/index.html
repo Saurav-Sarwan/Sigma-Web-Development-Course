@@ -1,0 +1,38 @@
+
+<!-- box-shadow: h-offset v-offset blur spread color inset; -->
+<!-- text-shadow: h-offset v-offset blur color; -->
+<!-- outline: width style color; -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;            
+            box-shadow: 15px 10px 15px 5px #888888;            
+        }
+        .text-shadow{
+            text-shadow: 6px 6px 4px #888888;
+            outline: 2px solid blue;
+            outline-offset: 5px;
+            border: 2px solid red;
+            border-radius: 5px;
+            padding: 4px;
+        }
+        /* outline is not the part of css-box-model */
+        /* outline has uniform width and it follows border radius */
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a box
+    </div>
+    <p class="text-shadow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit illo, a molestias repudiandae minima consectetur, at consequatur beatae sunt dolorem dolores architecto cum perspiciatis quo quae ex nam voluptatem placeat. Nisi iure possimus autem omnis qui? Quis dolor error, accusantium cumque quam fugiat voluptatum fugit illum iusto veniam at nihil voluptas. Repellat numquam modi laudantium earum nobis saepe ex, quos aperiam magni corporis, impedit animi voluptate tenetur, fuga autem ipsa ad. Fuga incidunt explicabo aut inventore quidem! Nihil laudantium qui cum, ab velit ex nesciunt aliquid commodi sint doloremque magnam pariatur sequi reprehenderit vitae aspernatur.
+    </p>    
+</body>
+</html>
