@@ -1,0 +1,45 @@
+
+<!-- Its not recommended to use this float and clear. Just know thats it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        img{
+            float: left;            
+        }
+        .cards{
+            border: 2px solid black;
+            display: flow-root; /*So that the image does not overflow*/
+        }
+        .card{
+            border: 2px solid red;
+        }
+
+        /* 1st child is img, 2nd is div then 3rd is div of big para */
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: right; /*Does not allow any element to float in right*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://cdn.wallpapersafari.com/72/61/jc9Lhy.jpg" alt=Image" width="550">
+        <div class="card">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium officiis et voluptas impedit quos earum cumque error soluta facere aliquid. Nam temporibus, ducimus tenetur molestiae eaque doloribus numquam at minus nemo ab dolorum possimus, voluptatem unde fuga dolor! Ut repudiandae earum ipsum maiores consequuntur debitis?</p>
+        </div>
+        <div class="card">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur vitae nam deleniti earum cum unde illo odit velit numquam repudiandae inventore voluptas necessitatibus sapiente iure, placeat vero optio atque fuga sunt quaerat pariatur! Explicabo dolorem sapiente consequuntur beatae non repellendus nisi voluptatibus laudantium quos ratione error minima placeat fugiat alias distinctio sequi, id illum consectetur labore dolor? Delectus exercitationem molestias ea explicabo magnam, dolorum mollitia debitis voluptatum deserunt adipisci totam autem tempora? Commodi consequatur error distinctio harum nesciunt dolorem sequi eaque, quos ab nulla excepturi veritatis expedita! Voluptatibus voluptates enim omnis quasi ab expedita. Neque provident quibusdam eligendi recusandae esse officia ea perspiciatis repellat quo eius cum eveniet illum repudiandae, nobis excepturi mollitia dolores similique iste? Aliquid nobis quas quam, voluptatibus minus neque aliquam cum labore architecto, placeat accusantium cumque eveniet fugiat nulla commodi minima illum atque natus beatae non pariatur inventore voluptate? Officiis iste placeat dicta dolorem ipsam eveniet deserunt aut inventore quidem dolorum a minima quae aliquid omnis nisi tempora sit repellendus, beatae perspiciatis quis! Nostrum sint consequatur, exercitationem, ea ad dignissimos, voluptatem aperiam doloribus ullam omnis laborum soluta quos quibusdam temporibus iusto saepe eum fugiat maxime dolorem mollitia repudiandae qui consequuntur! Ducimus aspernatur itaque saepe. At quis velit cumque dolor hic earum expedita quam enim asperiores architecto. Illo recusandae, cum quis inventore dignissimos architecto suscipit eaque? Earum odit obcaecati voluptatibus non! Eveniet officiis voluptate odio ad error illo odit quod sequi earum deserunt excepturi mollitia minima at, beatae nemo praesentium nulla quam provident ab incidunt asperiores, officia tenetur. Alias quae aperiam quos quaerat deserunt eligendi eum earum cupiditate? Magnam rem beatae hic blanditiis fugiat provident ipsum, at nisi, harum, corporis molestiae ipsam. Iste facilis perspiciatis earum nihil, excepturi quam veniam iure! Temporibus optio dolor perspiciatis? Veniam minus sed hic eveniet ipsam eius minima fugiat quaerat adipisci aperiam, ad assumenda nostrum corrupti mollitia esse dolorum, aut blanditiis dolores. Fugiat, inventore quod voluptatum provident natus, odit facere doloribus eum quas ullam iusto voluptate quae quisquam est ex laboriosam id eaque sint eius reiciendis quaerat! Odio maxime, accusamus saepe numquam deserunt delectus facere nihil repudiandae iste a iure, id reprehenderit inventore eaque voluptatem ab quibusdam perspiciatis accusantium corrupti, laboriosam necessitatibus tenetur consequuntur esse? Excepturi dolores laudantium quibusdam minus amet, tempore quasi explicabo! Ipsam et, nesciunt vel explicabo earum assumenda repellendus est iusto aliquam sequi cum nemo maiores tempora laboriosam itaque, adipisci distinctio. At optio quo voluptatibus ratione eligendi est suscipit facilis maxime, mollitia non, cupiditate eius sed similique nam quaerat nostrum accusantium voluptatum. Maiores voluptas nostrum magnam iste, fugit mollitia ut itaque molestias molestiae accusantium laudantium doloribus dicta. Possimus assumenda consectetur maxime laboriosam perspiciatis libero repellendus totam labore adipisci fugiat, quaerat mollitia, eum quae in dolore? Nesciunt, eius nobis. Nemo dolores nesciunt sequi dolore quas perspiciatis.
+            </p>
+        </div>
+        <div class="card">Card 3</div>
+    </div>
+    
+</body>
+</html>
