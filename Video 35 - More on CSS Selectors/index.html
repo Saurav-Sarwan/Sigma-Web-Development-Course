@@ -5,20 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More on CSS Selectors</title>
     <style>
-        .box:first-child{
-            /* background-color: red; */
+        /* .box:first-child{
+            background-color: red;
+        } */
+
+        /* .box::first-line{
+            color: yellow;
+        } */
+
+        
+        /* To select & apply to all elements of .boxes */
+        .boxes *{
+            color: blueviolet;
+            border: 2px solid black;
         }
 
-        .box::first-line{
-            background-color: yellow;
+        /* Grouping of selectors */
+        p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
         }
+
+        .box:nth-child(odd){
+            background-color: lightgoldenrodyellow;
+        }
+
+        .box:nth-last-child(1){
+            background-color: red;
+        }
+
+        /* Inserting element DYNAMICALLY through css */
+        /* before and after are pseudo elements */
+        .boxes::before{
+            content: "Hey I am Saurav";
+            color: blue
+        }
+
+        .boxes::after{
+            content: "Sigma course is good";
+            color: red;
+        }
+
+        /* effects for content selection */
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+
+        .box::first-letter{
+            color: peru ;
+            font-size: 45px;
+        }
+
+        input::placeholder{
+            color: rgb(97, 97, 135);
+        }
+
+        
     </style>
 </head>
 <body>
     <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
         <div class="box">Hey I am a box</div>
         <div class="box">Hey I am a box</div>
-        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your Name here">
     </div>
     
 </body>
