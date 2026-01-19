@@ -1,11 +1,246 @@
+<!-- Sticky Rule (Remember This Forever):
+-Sticky sticks ONLY within its parent container
+-If parent height = navbar height → ❌ sticky fails -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 5</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --primary-color: rgb(2, 156, 239);
+            --secondary-color: rgb(203, 242, 255);
+            --text-color-nav: white;
+            --footer1:rgb(75, 159, 255);
+            --footer2:rgb(38, 0, 255);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /*to make sure its on very top*/
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 2vh;
+            text-align: center;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+        }
+
+        nav section {
+            display: inline;
+            padding: 5vw;
+            font-size: 25px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        nav section a {
+            color: var(--text-color-nav);
+            text-decoration: none;
+        }
+
+        main {
+            padding: 3vw;
+            background-color: bisque;
+        }
+
+        img {
+            width: 20vw;
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        .centerIMG {
+            text-align: center;
+            /* this settings is for img-tag for direct application =>
+            margin: auto;
+            display: block;
+            width: 50%;
+            border: 2px solid blue; */
+        }
+
+        h2 {
+            text-align: center;
+            font-size: xx-large;
+            text-decoration: underline ;
+        }
+
+        h3,
+        p {
+            text-align: justify;
+            padding: 13px;
+            font-size: x-large;
+        }
+
+        .container {
+            display: inline-block;
+            border-radius: 10px;
+            background-color: beige;
+            width: 45vw;
+            margin: 0.5vw;
+        }
+
+        #Extra {
+            margin: 10px;
+            padding: 60px;
+            text-align: center;
+            border: 4px solid purple;
+            border-radius: 13px;
+            font-size: xx-large;
+        }
+
+        #circle {
+            position: fixed;
+            bottom: 0px;
+            right: 10px;
+            height: 120px;
+        }
+        
+        .footer {
+            background-color: var(--footer1);
+            color: var(--text-color-nav);
+            font-family: "Poppins", sans-serif;
+        }
+       
+        .footer-top {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .footer-top h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+
+        .footer-top p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 16px;
+            color: var(--text-color-nav);
+        }
+        
+        .footer-bottom {
+            background-color: var(--footer2);
+            padding: 20px 40px;
+            font-size: 14px;
+        }
+        
+        .footer-bottom .copyright {
+            display: inline-block;
+        }        
+        
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <section><a href="/">Home</a></section>
+            <section><a href="/">Services</a></section>
+            <section><a href="/">About</a></section>
+            <section><a href="/">Contact Us</a></section>
+        </nav>
+    </header>
+    <main>
+        <article class="container">
+            <figure class="centerIMG">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/sunflowers-blooming-against-sky-royalty-free-image-1573171826.jpg?crop=0.8xw:1xh;center,top"
+                    alt="Sunflower">
+            </figure>
+            <p>
+            <h2>
+                Sunflower
+            </h2>
+
+            <h3>
+                When it blooms:
+            </h3>
+
+            <p> Late summer to early fall </p>
+
+            <h3>
+                Why we love them:
+            </h3>
+
+            <p>
+                They're fun and come in every color and size from tiny to gigantic! Plus, they're easy
+                to grow from seed, though you may need to protect the seeds and seedlings from birds and rodents with a
+                chicken wire cage formed around them.
+            </p>
+            </p>
+
+        </article>
+        
+        <article class="container">
+            <figure class="centerIMG">
+                <img src="https://hips.hearstapps.com/clv.h-cdn.co/assets/16/18/tulip.jpg?crop=0.536xw:1.00xh;0.0182xw,0"
+                    alt="Tulip">
+            </figure>
+            <p>
+            <h2>
+                Tulip
+            </h2>
+            <h3>
+                When they bloom:
+            </h3>
+            <p> Early to late spring </p>
+
+            <h3>
+                Why we love them:
+            </h3>
+            <p>
+                Their stately blooms announce that spring has arrived! Plant the bulbs in the fall,
+                but be aware that they're often iffy about coming back in subsequent years. Treat them as annuals and
+                replant new bulbs the next fall.
+            </p>
+            </p>
+        </article>
+    </main>
+
+    <section id="Extra">
+        <h1>
+            Welcome to this Sigma Web Development Express
+        </h1>
+    </section>
+
+    <section id="circle">
+        <svg height="120" width="120">
+            <circle cx="60" cy="60" r="50" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <h2>Web Developer</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolore? Tenetur iure sed natus sunt cum a neque. Molestiae aliquam et voluptate delectus laborum? Suscipit quo sit dolor. Porro, odio?
+            </p>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="copyright">
+                &copy; 2026 SauravSarwan
+            </span>            
+        </div>
+    </footer>
 </body>
 </html>
