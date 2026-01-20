@@ -1,11 +1,89 @@
+
+<!-- There is no justify-items in Flexbox -->
+
+<!-- you have remember the properties of container and item absolutely -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Flexbox</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            height: 80vh;
+
+            /* following properties should only be applied on container strictly */
+            display: flex;
+            /* justify-content: center; */
+            align-items: center; /* it's applied when contents are in single-line in Cross-Axis*/
+            flex-direction: row; /*default*/
+            flex-wrap: wrap; /*contents starts from next line*/
+            /*align-content: flex-start; /*applied when contents are in multiple-lines, works with wrap only*/            
+            /* flex-flow: row wrap; */ /*effect is same as above two properties*/
+                    /* flex-flow: <'flex-direction'> || <'flex-wrap'>; */            
+            /* row-gap: 40px;
+            column-gap: 10px; */
+            gap: 40px 10px;
+        }
+
+        .item{
+            height: 92px;
+            width: 92px;
+            background-color: blueviolet;            
+            /* margin: 4px; */
+            border: 2px solid black;
+
+            /* flex-grow: 1; */
+        }
+
+        /* default order of all the items is 0 */
+        .order-1{
+            order: 1;
+        }
+
+        .item1{
+            /*flex-grow: 2; /*takes 2-times of relative space*/
+
+            /* flex-shrink: 2; shrinks to 1/2 of relative item when needed */
+            /* remove wrap and flex-grow for it to work */
+
+            align-self: flex-end; /*align items individually*/
+            /* for it to work remove align-content */
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item order-1">4</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> 
+
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item order-1">66</div>
+        <div class="item"></div>        
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> -->
+    </div>
 </body>
 </html>
