@@ -1,3 +1,4 @@
 {
-    "livePreview.hostIP": "10.14.104.65"
+    "livePreview.hostIP": "10.14.104.65",
+    "livePreview.openPreviewTarget": "External Browser"
 }
