@@ -17,16 +17,26 @@
             width: 80vw;
             /* grid-template-columns: 1fr 2fr 1fr; */
             /* grid-template-columns: repeat(4,1fr); */
-            grid-template-columns: repeat(4,minmax(100px,1fr));
+            /* grid-template-columns: repeat(4,minmax(100px,1fr)); */
+            grid-template-columns: repeat(4,70px);
+            grid-template-rows: repeat(2,70px);
             
+
             /* gap: 34px; */
             row-gap: 10px;
             column-gap: 40px;
             
+            /* Items properties works within cell */
             justify-items: center;
-            height: 50vh;
-            align-items: center;
-            
+            height: 70vh;
+            align-items:center;
+
+            /* Works when grid-container is bigger than grid */
+            /* justify-content: center; */
+
+            /* Works when height of grid-container is bigger than grid */
+            /* align-content: center; */
+            place-content: center; /*same as align-content*/            
         }
 
         .item{
@@ -44,10 +54,10 @@
             grid-column: 1/2;
         }
 
-        .item-4{
-            /* grid-row: 1/2;
-            grid-column: pehla/t; */
-        }
+        /* .item-4{
+            grid-row: 1/2;
+            grid-column: pehla/t;
+        } */
 
     </style>
 </head>
