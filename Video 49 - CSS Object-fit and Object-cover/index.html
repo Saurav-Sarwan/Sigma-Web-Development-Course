@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+    <style>
+
+        .container{
+            height: 634px;
+            width: 688px;
+            border: 2px solid black;
+            /* background-color: azure; */
+
+            background-image: url(https://us.123rf.com/450wm/rawpixel/rawpixel1902/rawpixel190204071/117114042-rear-view-of-female-photographer-walking-on-a-road.jpg?ver=6);
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            /* background-clip: border-box; */
+        }
+
+        img{
+            height: 488px;
+            width: 466px;
+
+            /* object-fit, this covers the height and width of img-tag & not container's. */
+            /* object-fit: cover ; */ /* crops the img according to height and width */
+            object-fit: contain ; /* maintains img's aspect-ratio and shows whole img */
+            /* object-fit: fill; */ /* covers whole height and width */
+            /* object-position: center center; */
+            /* object-position: 50% 50%; */
+            object-position: 10px 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://cdn.pixabay.com/photo/2024/02/13/22/20/eibsee-8572003_1280.jpg" alt=""> -->
+
+    </div>    
+</body>
+</html>
