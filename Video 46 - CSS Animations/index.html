@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+
+        .container{
+            height: 80vh;
+            width: 30vw;
+            background-color:rgb(66, 145, 127);
+        }
+
+        .box{
+            width: 34px;
+            height: 45px;
+            /* background-color: aqua; */
+
+            /* animation: sauravKaanimation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.16, 0.69, 0.56, 0.97);
+            animation-delay: 1s;
+            animation-direction: reverse;
+            animation-play-state: paused; */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: sauravKaanimation 1s ease-in-out 3s 1 backwards; */ /* using backwards retains red color during delay too */
+            animation: sauravKaanimation 2s ease-in-out 3s 1, 
+                       Saurav2 3s ease-in-out 3s 1;
+
+        }
+
+        @keyframes sauravKaanimation{
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+                transform: translate(1000px);
+            }
+        }
+
+        @keyframes Saurav2 {
+            0%{
+                transform: rotate(100deg); /* This overwrites the translate */
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>    
+</body>
+</html>
