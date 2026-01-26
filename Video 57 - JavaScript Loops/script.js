@@ -1,6 +1,6 @@
 console.log("Hey i am tutorial on loops")
 
-// let a = 1;
+let a = 1;
 // console.log(a)
 // console.log(a+1)
 // console.log(a+2)
