@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and Removing Elements using JavaScript</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div style="display: flex" class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+
+        <script>
+            // let div1 = document.createElement("div")
+            // div1.setAttribute("class","created")
+            // div1.innerHTML="Hey this is inserted by <b>Saurav</b>"
+            // document.querySelector(".container").after(div1)
+
+            let cont = document.querySelector(".container")
+            cont.insertAdjacentHTML("beforebegin","<b>I am under the water, pls help to much raining...  ioooouuu</b>")
+        </script>
+    </div>
+</body>
+</html>
